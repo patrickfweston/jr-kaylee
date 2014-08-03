@@ -1,29 +1,45 @@
 .timeline {
   @include clearfix();
-}
-
-%timeline__box {
-  padding: $padding;
+  padding: 20px 0;
 }
 
 .timeline__left {
   @extend .two-col__left;
-  @extend %timeline__box;
-  border-right: 2px solid $accent-color;
+  @include respond-min($mobile) {
+    padding-right: $padding * 2;
+    border-right: 4px solid $primary;
+    .timeline__box {
+      float: right;
+    }
+  }
 }
 
 .timeline__right {
   @extend .two-col__right;
-  @extend %timeline__box;
+  @include respond-min($mobile) {
+    margin-top: 100px;
+    padding-left: $padding * 2;
+    .timeline__box {
+      float: left;
+    }
+  }
+}
+
+.timeline__box {
+  max-width: 300px;
+  margin: 20px auto 50px;
+  padding: 0 $padding $padding;
+  background-color: $white;
+  @include border-radius(3px);
 }
 
 .timeline__photo {
   position: relative;
   top: -20px;
   display: block;
-  margin: 20px auto 0;
+  margin: 0 auto;
 }
 
 .timeline__text {
-  
+
 }

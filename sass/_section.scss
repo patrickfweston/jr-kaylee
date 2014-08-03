@@ -1,12 +1,33 @@
 .section {
-  max-width: $page-width;
+  position: relative;
   margin: 0 auto;
   padding: $padding / 2;
-  @include respond-min($mobile) {
-    padding: $padding;
-  }
 }
 
 .section--cover {
   @extend .section;
+  height: 600px;
+  max-width: none;
+  padding: 0;
+  background-image: url('../images/cover.jpg');
+  background-size: cover;
+}
+
+.section--timeline {
+  @extend .section;
+  background-color: lighten($primary, 20%);
+}
+
+.section__content {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  max-width: $page-width;
+}
+
+.section__subtitle {
+  position: relative;
+  display: block;
+  text-align: center;
+  bottom: -90%;
 }
