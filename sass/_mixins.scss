@@ -1,0 +1,7 @@
+@mixin respond-min($point) {
+  @media (min-width: $point) { @content; }
+}
+
+@mixin respond-max($point) {
+  @media (max-width: $point) { @content; }
+}

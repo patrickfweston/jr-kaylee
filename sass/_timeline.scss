@@ -1,0 +1,29 @@
+.timeline {
+  @include clearfix();
+}
+
+%timeline__box {
+  padding: $padding;
+}
+
+.timeline__left {
+  @extend .two-col__left;
+  @extend %timeline__box;
+  border-right: 2px solid $accent-color;
+}
+
+.timeline__right {
+  @extend .two-col__right;
+  @extend %timeline__box;
+}
+
+.timeline__photo {
+  position: relative;
+  top: -20px;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.timeline__text {
+  
+}

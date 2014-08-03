@@ -1,0 +1,12 @@
+.section {
+  max-width: $page-width;
+  margin: 0 auto;
+  padding: $padding / 2;
+  @include respond-min($mobile) {
+    padding: $padding;
+  }
+}
+
+.section--cover {
+  @extend .section;
+}

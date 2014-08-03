@@ -1,0 +1,61 @@
+// TWO COLUMN
+.two-col {
+  @include clearfix();
+}
+
+%two-col__item {
+  position: relative;
+  display: block;
+  width: 100%;
+  @include respond-min($mobile) {
+    width: 50%;
+  }
+}
+
+.two-col__left {
+  @extend %two-col__item;
+  @include respond-min($mobile) {
+    float: left;
+    padding-right: $padding; 
+  }
+}
+
+.two-col__right {
+  @extend %two-col__item;
+  @include respond-min($mobile) {
+    float: right;
+    padding-left: $padding; 
+  }
+}
+
+// THREE COLUMN
+.three-col {
+  @include clearfix();
+  @include respond-min($mobile) {
+    margin: 0 (-1 * ($padding / 2));
+  }
+}
+
+%three-col__item {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  @include respond-min($mobile) {
+    float: left;
+    width: (1/3) * 100%;
+    padding: 0 ($padding / 2);
+  }
+}
+
+.three-col__1 {
+  @extend %three-col__item;
+}
+
+.three-col__2 {
+  @extend %three-col__item;
+}
+
+.three-col__3 {
+  @extend %three-col__item;
+}

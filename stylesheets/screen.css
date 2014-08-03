@@ -2,11 +2,11 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, img, .image, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -24,45 +24,177 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img, a .image {
   border: none;
 }
 
-/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
+}
+
+/* BREAKPOINTS */
+/* TYPOGRAPHY */
+/* COLORS */
+/* OTHERS */
+/* line 1, ../sass/_common.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 25, ../sass/_common.scss */
+img, .image {
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* line 2, ../sass/_layout.scss */
+.two-col {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 6, ../sass/_layout.scss */
+.two-col__left, .timeline__left, .two-col__right, .timeline__right {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  /* line 6, ../sass/_layout.scss */
+  .two-col__left, .timeline__left, .two-col__right, .timeline__right {
+    width: 50%;
+  }
+}
+
+@media (min-width: 600px) {
+  /* line 15, ../sass/_layout.scss */
+  .two-col__left, .timeline__left {
+    float: left;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 600px) {
+  /* line 23, ../sass/_layout.scss */
+  .two-col__right, .timeline__right {
+    float: right;
+    padding-left: 20px;
+  }
+}
+
+/* line 32, ../sass/_layout.scss */
+.three-col {
+  overflow: hidden;
+  *zoom: 1;
+}
+@media (min-width: 600px) {
+  /* line 32, ../sass/_layout.scss */
+  .three-col {
+    margin: 0 -10px;
+  }
+}
+
+/* line 39, ../sass/_layout.scss */
+.three-col__1, .three-col__2, .three-col__3 {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+@media (min-width: 600px) {
+  /* line 39, ../sass/_layout.scss */
+  .three-col__1, .three-col__2, .three-col__3 {
+    float: left;
+    width: 33.33333%;
+    padding: 0 10px;
+  }
+}
+
+/* line 5, ../sass/_image.scss */
+.image--circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* line 9, ../sass/_image.scss */
+.image--full {
+  height: auto;
+  width: 100%;
+}
+
+/* line 1, ../sass/_section.scss */
+.section, .section--cover {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+@media (min-width: 600px) {
+  /* line 1, ../sass/_section.scss */
+  .section, .section--cover {
+    padding: 20px;
+  }
+}
+
+/* line 1, ../sass/_timeline.scss */
+.timeline {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 5, ../sass/_timeline.scss */
+.timeline__left, .timeline__right {
+  padding: 20px;
+}
+
+/* line 9, ../sass/_timeline.scss */
+.timeline__left {
+  border-right: 2px solid #b43bff;
+}
+
+/* line 20, ../sass/_timeline.scss */
+.timeline__photo {
+  position: relative;
+  top: -20px;
+  display: block;
+  margin: 20px auto 0;
 }

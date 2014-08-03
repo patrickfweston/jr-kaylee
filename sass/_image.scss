@@ -1,0 +1,12 @@
+.image {
+  @extend img;
+}
+
+.image--circle {
+  @include border-radius(50%);
+}
+
+.image--full {
+  height: auto;
+  width: 100%;
+}
