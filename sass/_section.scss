@@ -1,7 +1,7 @@
 .section {
   position: relative;
   margin: 0 auto;
-  padding: $padding / 2;
+  padding: 1px $padding / 2;
 }
 
 .section--cover {
@@ -15,19 +15,25 @@
 
 .section--timeline {
   @extend .section;
-  background-color: lighten($primary, 20%);
+  background-color: lighten($primary, 25%);
 }
 
 .section__content {
   position: relative;
   display: block;
-  margin: 0 auto;
+  margin: 40px auto;
   max-width: $page-width;
 }
 
 .section__subtitle {
   position: relative;
   display: block;
+  margin: 0 auto;
   text-align: center;
-  bottom: -90%;
+  bottom: -85%;
+  color: white;
+  @extend .fancy--one-line;
+  @include respond-min($mobile) {
+    width: 400px;
+  }
 }

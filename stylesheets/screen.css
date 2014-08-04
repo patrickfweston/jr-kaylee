@@ -69,6 +69,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* BREAKPOINTS */
 /* TYPOGRAPHY */
+@font-face {
+  font-family: 'bodonixtregular';
+  src: url("../fonts/bodoni/BodoniXT-webfont.eot");
+  src: url("../fonts/bodoni/BodoniXT-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/bodoni/BodoniXT-webfont.woff") format("woff"), url("../fonts/bodoni/BodoniXT-webfont.ttf") format("truetype"), url("../fonts/bodoni/BodoniXT-webfont.svg#bodonixtregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* COLORS */
 /* OTHERS */
 /* line 1, ../sass/_common.scss */
@@ -78,15 +86,106 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-sizing: border-box;
 }
 
-/* line 25, ../sass/_common.scss */
+/* line 5, ../sass/_common.scss */
+html, body {
+  font-family: 'Baskerville', 'Franklin Gothic Book';
+  font-size: 18px;
+}
+
+/* line 10, ../sass/_common.scss */
+h1, h2, h3 {
+  text-align: center;
+  font-family: "bodonixtregular";
+  font-weight: normal;
+  line-height: 1.2em;
+}
+
+/* line 17, ../sass/_common.scss */
+h1 {
+  font-size: 2.75rem;
+  margin-bottom: 0.25em;
+}
+
+/* line 22, ../sass/_common.scss */
+h2 {
+  display: block;
+  font-size: 1.85rem;
+  margin: 0.5em auto;
+  width: 75%;
+}
+
+/* line 31, ../sass/_common.scss */
+h3 {
+  font-size: 1.33rem;
+  margin: 0.33em 0;
+}
+
+/* line 36, ../sass/_common.scss */
+p {
+  line-height: 1.2em;
+}
+/* line 38, ../sass/_common.scss */
+p + p {
+  margin-top: 1em;
+}
+
+/* line 43, ../sass/_common.scss */
+small {
+  font-variant: small-caps;
+  font-size: 1.25rem;
+}
+
+/* line 52, ../sass/_common.scss */
 div {
   position: relative;
 }
 
-/* line 29, ../sass/_common.scss */
+/* line 56, ../sass/_common.scss */
 img, .image {
   max-width: 100%;
   height: auto !important;
+}
+
+/* line 61, ../sass/_common.scss */
+.fancy, .fancy--one-line, h2, .section__subtitle {
+  overflow: hidden;
+  text-align: center;
+}
+/* line 64, ../sass/_common.scss */
+.fancy span, .fancy--one-line span, h2 span, .section__subtitle span {
+  position: relative;
+}
+/* line 66, ../sass/_common.scss */
+.fancy span:before, .fancy--one-line span:before, h2 span:before, .section__subtitle span:before, .fancy span:after, .fancy--one-line span:after, h2 span:after, .section__subtitle span:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  width: 600px;
+  height: 7px;
+  top: 50%;
+  margin-top: -4px;
+}
+/* line 77, ../sass/_common.scss */
+.fancy span:before, .fancy--one-line span:before, h2 span:before, .section__subtitle span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+/* line 81, ../sass/_common.scss */
+.fancy span:after, .fancy--one-line span:after, h2 span:after, .section__subtitle span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+/* line 91, ../sass/_common.scss */
+.fancy--one-line span:before, h2 span:before, .section__subtitle span:before, .fancy--one-line span:after, h2 span:after, .section__subtitle span:after {
+  border-bottom: 0;
+  margin-top: 0;
+}
+
+/* line 100, ../sass/_common.scss */
+.fancy--black span:before, h2 span:before, .fancy--black span:after, h2 span:after {
+  border-color: black;
 }
 
 /* line 2, ../sass/_layout.scss */
@@ -112,7 +211,7 @@ img, .image {
   /* line 15, ../sass/_layout.scss */
   .two-col__left, .timeline__left {
     float: left;
-    padding-right: 20px;
+    padding-right: 40px;
   }
 }
 
@@ -120,7 +219,7 @@ img, .image {
   /* line 23, ../sass/_layout.scss */
   .two-col__right, .timeline__right {
     float: right;
-    padding-left: 20px;
+    padding-left: 40px;
   }
 }
 
@@ -132,7 +231,7 @@ img, .image {
 @media (min-width: 600px) {
   /* line 32, ../sass/_layout.scss */
   .three-col {
-    margin: 0 -10px;
+    margin: 0 -20px;
   }
 }
 
@@ -148,7 +247,7 @@ img, .image {
   .three-col__1, .three-col__2, .three-col__3 {
     float: left;
     width: 33.33333%;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 
@@ -167,11 +266,17 @@ img, .image {
   width: 100%;
 }
 
+/* line 14, ../sass/_image.scss */
+.image--center {
+  display: block;
+  margin: 0 auto;
+}
+
 /* line 1, ../sass/_section.scss */
 .section, .section--cover, .section--timeline {
   position: relative;
   margin: 0 auto;
-  padding: 10px;
+  padding: 1px 20px;
 }
 
 /* line 7, ../sass/_section.scss */
@@ -185,23 +290,31 @@ img, .image {
 
 /* line 16, ../sass/_section.scss */
 .section--timeline {
-  background-color: #c7ffff;
+  background-color: #acd4dd;
 }
 
 /* line 21, ../sass/_section.scss */
 .section__content {
   position: relative;
   display: block;
-  margin: 0 auto;
-  max-width: 1000px;
+  margin: 40px auto;
+  max-width: 900px;
 }
 
 /* line 28, ../sass/_section.scss */
 .section__subtitle {
   position: relative;
   display: block;
+  margin: 0 auto;
   text-align: center;
-  bottom: -90%;
+  bottom: -85%;
+  color: white;
+}
+@media (min-width: 600px) {
+  /* line 28, ../sass/_section.scss */
+  .section__subtitle {
+    width: 400px;
+  }
 }
 
 /* line 1, ../sass/_navigation.scss */
@@ -210,7 +323,7 @@ img, .image {
   display: block;
   height: 75px;
   width: 100%;
-  border-bottom: 3px solid #61ffff;
+  border-bottom: 3px solid #51a5b8;
 }
 
 /* line 9, ../sass/_navigation.scss */
@@ -230,8 +343,8 @@ img, .image {
   top: 22px;
   right: 20px;
   display: block;
-  border-bottom: 17px double #48ff24;
-  border-top: 6px solid #48ff24;
+  border-bottom: 17px double #b7d47b;
+  border-top: 6px solid #b7d47b;
   content: "";
   height: 28px;
   width: 30px;
@@ -250,35 +363,74 @@ img, .image {
   padding: 20px 0;
 }
 
+/* line 6, ../sass/_timeline.scss */
+.timeline__wrapper {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 10, ../sass/_timeline.scss */
+.timeline__left {
+  position: relative;
+}
 @media (min-width: 600px) {
-  /* line 6, ../sass/_timeline.scss */
+  /* line 10, ../sass/_timeline.scss */
   .timeline__left {
     padding-right: 40px;
-    border-right: 4px solid #61ffff;
+    border-right: 5px solid #51a5b8;
   }
-  /* line 11, ../sass/_timeline.scss */
+  /* line 16, ../sass/_timeline.scss */
   .timeline__left .timeline__box {
     float: right;
   }
+  /* line 18, ../sass/_timeline.scss */
+  .timeline__left .timeline__box:after {
+    position: absolute;
+    top: 20%;
+    right: -30px;
+    display: block;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid white;
+  }
 }
 
+/* line 34, ../sass/_timeline.scss */
+.timeline__right {
+  position: relative;
+}
 @media (min-width: 600px) {
-  /* line 17, ../sass/_timeline.scss */
+  /* line 34, ../sass/_timeline.scss */
   .timeline__right {
-    margin-top: 100px;
-    padding-left: 40px;
+    padding: 100px 0 0 40px;
   }
-  /* line 22, ../sass/_timeline.scss */
+  /* line 39, ../sass/_timeline.scss */
   .timeline__right .timeline__box {
     float: left;
   }
+  /* line 41, ../sass/_timeline.scss */
+  .timeline__right .timeline__box:after {
+    position: absolute;
+    top: 20%;
+    left: -30px;
+    display: block;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid white;
+  }
 }
 
-/* line 28, ../sass/_timeline.scss */
+/* line 57, ../sass/_timeline.scss */
 .timeline__box {
   max-width: 300px;
-  margin: 20px auto 50px;
-  padding: 0 20px 20px;
+  margin: 50px auto 80px;
+  padding: 0 40px 40px;
   background-color: white;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -286,11 +438,37 @@ img, .image {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
+@media (min-width: 600px) {
+  /* line 57, ../sass/_timeline.scss */
+  .timeline__box {
+    margin: 50px auto 50px;
+  }
+}
 
-/* line 36, ../sass/_timeline.scss */
+/* line 68, ../sass/_timeline.scss */
 .timeline__photo {
   position: relative;
-  top: -20px;
+  top: -50px;
   display: block;
   margin: 0 auto;
+}
+
+/* line 83, ../sass/_timeline.scss */
+.timeline__text {
+  margin-top: -30px;
+}
+
+/* line 87, ../sass/_timeline.scss */
+.timeline__year {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 1.0rem;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  /* line 87, ../sass/_timeline.scss */
+  .timeline__year {
+    padding: 10px 5px 10px 0;
+  }
 }

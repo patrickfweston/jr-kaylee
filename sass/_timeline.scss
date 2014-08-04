@@ -3,43 +3,94 @@
   padding: 20px 0;
 }
 
+.timeline__wrapper {
+  @include clearfix();
+}
+
 .timeline__left {
   @extend .two-col__left;
+  position: relative;
   @include respond-min($mobile) {
-    padding-right: $padding * 2;
-    border-right: 4px solid $primary;
+    padding-right: $padding;
+    border-right: 5px solid $primary;
     .timeline__box {
       float: right;
+      &:after {
+        position: absolute;
+        top: 20%;
+        right: -30px;
+        display: block;
+        content: " ";
+        width: 0; 
+        height: 0;
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid $white;
+      }
     }
   }
 }
 
 .timeline__right {
   @extend .two-col__right;
+  position: relative;
   @include respond-min($mobile) {
-    margin-top: 100px;
-    padding-left: $padding * 2;
+    padding: 100px 0 0 $padding;
     .timeline__box {
       float: left;
+      &:after {
+        position: absolute;
+        top: 20%;
+        left: -30px;
+        display: block;
+        content: " ";
+        width: 0; 
+        height: 0;
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-right: 30px solid $white;
+      }
     }
   }
 }
 
 .timeline__box {
   max-width: 300px;
-  margin: 20px auto 50px;
+  margin: 50px auto 80px;
   padding: 0 $padding $padding;
   background-color: $white;
   @include border-radius(3px);
+  @include respond-min($mobile) {
+    margin: 50px auto 50px;
+  }
 }
 
 .timeline__photo {
   position: relative;
-  top: -20px;
+  top: -50px;
   display: block;
   margin: 0 auto;
 }
 
-.timeline__text {
+// .timeline__left .timeline__box:nth-child(2n) .timeline__photo, .timeline__right .timeline__box:nth-child(2n+1) .timeline__photo {
+//   border: 2px solid lighten($accent, 10%);
+// }
 
+// .timeline__left .timeline__box:nth-child(2n+1) .timeline__photo, .timeline__right .timeline__box:nth-child(2n) .timeline__photo {
+//   border: 2px solid lighten($secondary, 10%);
+// }
+
+.timeline__text {
+  margin-top: -30px;
+}
+
+.timeline__year {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 1.0rem;
+  text-align: center;
+  @include respond-min($mobile) {
+    padding: 10px 5px 10px 0;    
+  }
 }

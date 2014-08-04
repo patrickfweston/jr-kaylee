@@ -3,18 +3,30 @@ $desktop: 1000px;
 $tablet: 800px;
 $mobile: 600px;
 
-$page-width: 1000px;
 
 /* TYPOGRAPHY */
+@font-face {
+    font-family: 'bodonixtregular';
+    src: url('../fonts/bodoni/BodoniXT-webfont.eot');
+    src: url('../fonts/bodoni/BodoniXT-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bodoni/BodoniXT-webfont.woff') format('woff'),
+         url('../fonts/bodoni/BodoniXT-webfont.ttf') format('truetype'),
+         url('../fonts/bodoni/BodoniXT-webfont.svg#bodonixtregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+$bodoni: 'bodonixtregular';
 
 
 /* COLORS */
-$primary: #61ffff;
-$secondary: #48ff24;
-$accent: #ff006a;
+$primary: #51A5B8;
+$secondary: #B7D47B;
+$accent: #E75F82;
 
 $white: #fff;
+$black: #000;
 
 
 /* OTHERS */
-$padding: 20px;
+$page-width: 900px;
+$padding: 40px;
