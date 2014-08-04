@@ -7,11 +7,27 @@
 }
 
 .navigation__item {
-  display: inline;
-  float: left;
-  padding-left: 20px;
+  position: relative;
+  display: block;
+  border-top: 1px solid $secondary;
   &:first-child {
-    padding: 0;
+    border: none;
+  }
+  @include respond-min($tablet) {
+    display: block;
+    float: left;
+    border: none;
+  }
+}
+
+.navigation__link {
+  display: block;
+  padding: 20px;
+  font-size: 1.1rem;
+  color: darken($secondary, 20%);
+  @include respond-min($tablet) {
+    font-size: 1rem;
+    padding: 25px;
   }
 }
 
@@ -25,7 +41,23 @@
   content: "";
   height: 28px;
   width: 30px;
+  cursor: pointer;
   @include respond-min($tablet) {
     display: none;
+  }
+}
+
+.navigation__wrapper {
+  display: none;
+  position: relative;
+  top: 75px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.925);
+  &.isDisplayed {
+    display: block;
+  }
+  @include respond-min($tablet) {
+    display: block;
+    top: 0;
   }
 }

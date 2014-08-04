@@ -4,6 +4,8 @@
   <meta name="viewport" content="width=device-width">
   <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
   <!--[if IE]>
       <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
@@ -11,13 +13,13 @@
 
 <body>
   <nav class="navigation">
-    <ul>
-      <li class="navigation__item"><a href="#">How We Met</a></li>
-      <li class="navigation__item"><a href="#">About Us</a></li>
-      <li class="navigation__item"><a href="#">Photos</a></li>
-      <li class="navigation__item"><a href="#">The Big Day</a></li>
-      <li class="navigation__item"><a href="#">Wedding Party</a></li>
-      <li class="navigation__item"><a href="#">Registry</a></li>
+    <ul class="navigation__wrapper">
+      <li class="navigation__item"><a href="#met" class="navigation__link">How We Met</a></li>
+      <li class="navigation__item"><a href="#about" class="navigation__link">About Us</a></li>
+      <li class="navigation__item"><a href="#photos" class="navigation__link">Photos</a></li>
+      <li class="navigation__item"><a href="#big-day" class="navigation__link">The Big Day</a></li>
+      <li class="navigation__item"><a href="#party" class="navigation__link">Wedding Party</a></li>
+      <li class="navigation__item"><a href="#registry" class="navigation__link">Registry</a></li>
     </ul>
     <div class="navigation__hamburger"></div>
   </nav>
@@ -25,7 +27,7 @@
     <small class="section__subtitle"><span>May 25th, 2015</span></small>
   </section>
 
-  <section class="section--timeline">
+  <section id="met" class="section--timeline">
     <div class="section__content">
       <h1>How We Met</h1>
       <div class="timeline">
@@ -61,7 +63,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section id="about" class="section">
     <div class="section__content">
       <h1>About Us</h1>
       <div class="two-col">
@@ -81,13 +83,13 @@
     </div>
   </section>
 
-  <section class="section">
+  <section id="photos" class="section">
     <div class="section__content">
       <h1>Photos</h1>
     </div>
   </section>
 
-  <section class="section">
+  <section id="big-day" class="section">
     <div class="section__content">
       <h1>The Big Day</h1>
       <div class="three-col">
@@ -107,13 +109,13 @@
     </div>
   </section>
 
-  <section class="section">
+  <section id="party" class="section">
     <div class="section__content">
       <h1>The Wedding Party</h1>
     </div>
   </section>
 
-  <section class="section">
+  <section id="registry" class="section">
     <div class="section__content">
       <h1>Registry</h1>
     </div>

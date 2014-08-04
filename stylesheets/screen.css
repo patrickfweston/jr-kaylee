@@ -135,27 +135,33 @@ small {
   font-size: 1.25rem;
 }
 
-/* line 52, ../sass/_common.scss */
+/* line 48, ../sass/_common.scss */
+a {
+  color: #b7d47b;
+  text-decoration: none;
+}
+
+/* line 53, ../sass/_common.scss */
 div {
   position: relative;
 }
 
-/* line 56, ../sass/_common.scss */
+/* line 57, ../sass/_common.scss */
 img, .image {
   max-width: 100%;
   height: auto !important;
 }
 
-/* line 61, ../sass/_common.scss */
+/* line 62, ../sass/_common.scss */
 .fancy, .fancy--one-line, h2, .section__subtitle {
   overflow: hidden;
   text-align: center;
 }
-/* line 64, ../sass/_common.scss */
+/* line 65, ../sass/_common.scss */
 .fancy span, .fancy--one-line span, h2 span, .section__subtitle span {
   position: relative;
 }
-/* line 66, ../sass/_common.scss */
+/* line 67, ../sass/_common.scss */
 .fancy span:before, .fancy--one-line span:before, h2 span:before, .section__subtitle span:before, .fancy span:after, .fancy--one-line span:after, h2 span:after, .section__subtitle span:after {
   content: "";
   position: absolute;
@@ -166,24 +172,24 @@ img, .image {
   top: 50%;
   margin-top: -4px;
 }
-/* line 77, ../sass/_common.scss */
+/* line 78, ../sass/_common.scss */
 .fancy span:before, .fancy--one-line span:before, h2 span:before, .section__subtitle span:before {
   right: 100%;
   margin-right: 15px;
 }
-/* line 81, ../sass/_common.scss */
+/* line 82, ../sass/_common.scss */
 .fancy span:after, .fancy--one-line span:after, h2 span:after, .section__subtitle span:after {
   left: 100%;
   margin-left: 15px;
 }
 
-/* line 91, ../sass/_common.scss */
+/* line 92, ../sass/_common.scss */
 .fancy--one-line span:before, h2 span:before, .section__subtitle span:before, .fancy--one-line span:after, h2 span:after, .section__subtitle span:after {
   border-bottom: 0;
   margin-top: 0;
 }
 
-/* line 100, ../sass/_common.scss */
+/* line 101, ../sass/_common.scss */
 .fancy--black span:before, h2 span:before, .fancy--black span:after, h2 span:after {
   border-color: black;
 }
@@ -328,16 +334,39 @@ img, .image {
 
 /* line 9, ../sass/_navigation.scss */
 .navigation__item {
-  display: inline;
-  float: left;
-  padding-left: 20px;
+  position: relative;
+  display: block;
+  border-top: 1px solid #b7d47b;
 }
 /* line 13, ../sass/_navigation.scss */
 .navigation__item:first-child {
-  padding: 0;
+  border: none;
+}
+@media (min-width: 800px) {
+  /* line 9, ../sass/_navigation.scss */
+  .navigation__item {
+    display: block;
+    float: left;
+    border: none;
+  }
 }
 
-/* line 18, ../sass/_navigation.scss */
+/* line 23, ../sass/_navigation.scss */
+.navigation__link {
+  display: block;
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #89b039;
+}
+@media (min-width: 800px) {
+  /* line 23, ../sass/_navigation.scss */
+  .navigation__link {
+    font-size: 1rem;
+    padding: 25px;
+  }
+}
+
+/* line 34, ../sass/_navigation.scss */
 .navigation__hamburger {
   position: absolute;
   top: 22px;
@@ -348,11 +377,32 @@ img, .image {
   content: "";
   height: 28px;
   width: 30px;
+  cursor: pointer;
 }
 @media (min-width: 800px) {
-  /* line 18, ../sass/_navigation.scss */
+  /* line 34, ../sass/_navigation.scss */
   .navigation__hamburger {
     display: none;
+  }
+}
+
+/* line 50, ../sass/_navigation.scss */
+.navigation__wrapper {
+  display: none;
+  position: relative;
+  top: 75px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.925);
+}
+/* line 56, ../sass/_navigation.scss */
+.navigation__wrapper.isDisplayed {
+  display: block;
+}
+@media (min-width: 800px) {
+  /* line 50, ../sass/_navigation.scss */
+  .navigation__wrapper {
+    display: block;
+    top: 0;
   }
 }
 
