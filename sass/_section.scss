@@ -6,11 +6,19 @@
 
 .section--cover {
   @extend .section;
-  height: 600px;
+  height: 300px;
   max-width: none;
+  margin-top: $nav-height;
   padding: 0;
   background-image: url('../images/cover.jpg');
   background-size: cover;
+  @include respond-min($mobile) {
+    height: 450px;
+  }
+  @include respond-min($tablet) {
+    height: 600px;
+    margin-top: 0;
+  }
 }
 
 .section--timeline {
@@ -18,22 +26,43 @@
   background-color: lighten($primary, 25%);
 }
 
+.section--secondary {
+  @extend .section;
+  background-color: lighten($secondary, 30%);
+}
+
+.section--accent-lines {
+  @extend .section;
+  border-top: 4px solid $accent;
+  border-bottom: 4px solid $accent;
+}
+
 .section__content {
   position: relative;
   display: block;
-  margin: 40px auto;
+  margin: ($padding / 2) auto;
   max-width: $page-width;
+  @include respond-min($mobile) {
+    margin: $padding auto;
+  }
+}
+
+.section__content--slider {
+  @extend .section__content;
+  margin: 0 auto;
+  @include respond-min($mobile) {
+    margin: $padding auto;
+  }
 }
 
 .section__subtitle {
   position: relative;
   display: block;
   margin: 0 auto;
+  width: 90%;
+  max-width: 400px;
   text-align: center;
   bottom: -85%;
   color: white;
   @extend .fancy--one-line;
-  @include respond-min($mobile) {
-    width: 400px;
-  }
 }

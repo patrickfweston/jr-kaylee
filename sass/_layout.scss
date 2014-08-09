@@ -7,14 +7,20 @@
   position: relative;
   display: block;
   width: 100%;
+  margin-bottom: 50px;
   @include respond-min($mobile) {
     width: 50%;
+    margin: 0;
   }
 }
 
 .two-col__left {
   @extend %two-col__item;
   @include respond-min($mobile) {
+    float: left;
+    padding-right: ($padding / 2);
+  }
+  @include respond-min($tablet) {
     float: left;
     padding-right: $padding; 
   }
@@ -23,6 +29,10 @@
 .two-col__right {
   @extend %two-col__item;
   @include respond-min($mobile) {
+    float: right;
+    padding-left: ($padding / 2);
+  }
+  @include respond-min($tablet) {
     float: right;
     padding-left: $padding; 
   }
@@ -40,7 +50,7 @@
   position: relative;
   display: block;
   width: 100%;
-  padding: 0;
+  padding-bottom: $padding;
   @include respond-min($mobile) {
     float: left;
     width: (1/3) * 100%;
