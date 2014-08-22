@@ -1,0 +1,40 @@
+.party {
+  @include clearfix();
+  margin-top: $padding;
+}
+
+.party__left {
+  text-align: left;
+  @include respond-min($tablet) {
+    padding-left: $padding * 2;
+  }
+  img {
+    float: left;
+    margin-right: $padding / 2;
+    border: 3px solid $accent;
+  }
+}
+
+.party__right {
+  text-align: right;
+  @include respond-min($tablet) {
+    padding-right: $padding * 2;
+  }
+  img {
+    float: right;
+    margin-left: $padding / 2;
+    border: 3px solid $primary;
+  }
+}
+
+.party__entry {
+  @include clearfix();
+  overflow: visible;
+  height: 100px;
+  margin-bottom: $padding;
+  clear: both;
+}
+
+.party__subtitle {
+  font-style: italic;
+}

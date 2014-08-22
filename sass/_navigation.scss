@@ -16,6 +16,22 @@
   }
 }
 
+.navigation__wrapper {
+  display: none;
+  position: relative;
+  top: $nav-height;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.925);
+  &.isDisplayed {
+    display: block;
+  }
+  @include respond-min($tablet) {
+    display: block;
+    float: right;
+    top: 0;
+  }
+}
+
 .navigation__item {
   position: relative;
   display: block;
@@ -41,10 +57,14 @@
   padding: 20px;
   font-size: 1.1rem;
   color: darken($secondary, 20%);
+  &:hover {
+    color: $secondary;
+  }
   @include respond-min($tablet) {
     font-size: 1rem;
     padding: 25px;
   }
+  @include transition(all 0.2s linear);
 }
 
 .navigation__hamburger {
@@ -60,20 +80,5 @@
   cursor: pointer;
   @include respond-min($tablet) {
     display: none;
-  }
-}
-
-.navigation__wrapper {
-  display: none;
-  position: relative;
-  top: $nav-height;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.925);
-  &.isDisplayed {
-    display: block;
-  }
-  @include respond-min($tablet) {
-    display: block;
-    top: 0;
   }
 }

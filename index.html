@@ -8,7 +8,10 @@
   <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/moment.min.js"></script>
   <script src="js/main.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp?key=AIzaSyBMhmcLGJHYu_71BLk2EjXoOI9izthuZis"></script>
+  <script src="js/map.js"></script>
   <!--[if IE]>
       <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
@@ -27,7 +30,7 @@
     <div class="navigation__hamburger"></div>
   </nav>
   <section class="section--cover">
-    <small class="section__subtitle"><span>May 25th, 2015</span></small>
+    <small class="section__subtitle"><span>May 23rd, 2015</span></small>
   </section>
 
   <section id="met" class="section--timeline">
@@ -86,7 +89,7 @@
     </div>
   </section>
 
-  <section id="photos" class="section section__content--slider">
+  <section id="photos" class="section section--slider">
     <div class="section__content">
       <h1>Photos</h1>
       <div class="slider flexslider">
@@ -127,12 +130,97 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laudantium repellendus, neque rerum, debitis, autem aut quia, illum ut reiciendis delectus ipsam?</p>
         </div>
       </div>
+      <div id="map" style="width: 100%; height: 300px;"></div>
     </div>
   </section>
 
   <section id="party" class="section">
     <div class="section__content">
       <h1>The Wedding Party</h1>
+      <div class="party">
+        <div class="party__left two-col__left">
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Karlee Ream</h4>
+            <span class="party__subtitle">Maid of Honor</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Koree Ream</h4>
+            <span class="party__subtitle">Maid of Honor</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Karlee Ream</h4>
+            <span class="party__subtitle">Bridesmaid</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Karlee Ream</h4>
+            <span class="party__subtitle">Bridesmaid</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Karlee Ream</h4>
+            <span class="party__subtitle">Bridesmaid</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Karlee Ream</h4>
+            <span class="party__subtitle">Maid of Honor</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Karlee Ream</h4>
+            <span class="party__subtitle">Maid of Honor</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+        </div>
+        <div class="party__right two-col__right">
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Patrick Weston</h4>
+            <span class="party__subtitle">Best Man</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Karlee Ream</h4>
+            <span class="party__subtitle">Groomsman</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Karlee Ream</h4>
+            <span class="party__subtitle">Groomsman</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Karlee Ream</h4>
+            <span class="party__subtitle">Groomsman</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Karlee Ream</h4>
+            <span class="party__subtitle">Groomsman</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+          <div class="party__entry">
+            <img class="image--circle" src="http://placehold.it/100x100" />
+            <h4>Karlee Ream</h4>
+            <span class="party__subtitle">Groomsman</span>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -145,6 +233,9 @@
   <section class="section">
     <div class="section__content">
       <h1>We Can't Wait</h1>
+      <p>We're so excited to begin our lives together. We hope you can join us in</p>
+      <p class="countdown">281 days, 15 hours, 34 minutes and 12 seconds</p>
+      <p>for our wedding.</p>
     </div>
   </section>
 

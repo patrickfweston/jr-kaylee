@@ -47,12 +47,8 @@
   }
 }
 
-.section__content--slider {
-  @extend .section__content;
-  margin: 0 auto;
-  @include respond-min($mobile) {
-    margin: $padding auto;
-  }
+.section--slider {
+  @extend .section;
 }
 
 .section__subtitle {
